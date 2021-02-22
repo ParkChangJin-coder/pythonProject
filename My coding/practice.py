@@ -43,3 +43,77 @@ def train(station):
 train("사당")
 train("신도림")
 train("인천공항")
+
+print(2**3)
+print(5%3) #나머지
+print(5//3) #몫
+print(10 > 3) #True
+print(4 >= 7) #False
+print(3 == 3)
+print( 1 != 3)
+print(not (1 != 3))
+print((3 > 0) and (3 < 5))
+print((3 > 0) & (3 < 5))
+
+print((3 > 0) or (3 > 5))
+print((3 > 0) | (3 > 5))
+print(5 > 4 > 3)
+print(5 > 4 > 7)
+
+print(2 + 3 * 4)
+number = 2 + 3 * 4
+print(number)
+number = number + 2
+print(number)
+
+number += 2
+print(number)
+number *= 2
+print(number)
+number /= 2
+print(number)
+number -= 2
+print(number)
+number %= 3
+print(number)
+
+print(abs(-5))
+print(pow(4, 2))
+print(max(12, 5))
+print(min(12, 5))
+print(round(3.14))
+
+from math import *
+print(floor(4.99))
+print(ceil(3.14))
+print(sqrt(16)) #4의 제곱근
+
+from random import *
+print(random()) #0.0 ~ 1.0 임의의 값
+print(random() * 10)
+print(int(random() * 10))
+print(int(random() * 10) + 1) #1 ~ 10
+
+print(int(random() * 45) + 1)
+#randrange(1, 46)
+
+for i in range(6):
+ print(str(randrange(1, 46)) + " lotto") # 1~ 45 미만의 임의의 값 생성
+
+for j in range(3):
+ print("오프라인 스터디 모임 날짜는 " + str(randrange(4, 28)) + "일로 선정되었습니다.")
+
+date = randint(4, 28)
+print("오프라인 스터디 모임 날짜는 " + str(date) + "일로 선정되었습니다.")
+
+for k in range(3):
+     date2 = randint(1, 28)
+     print("모임은" + str(date2) + "일 입니다.")
+
+
+
+
+
+
+
+
