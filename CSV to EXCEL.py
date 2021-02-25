@@ -26,6 +26,17 @@
 #엑셀 파일 생성하기
 #CSV파일 을 엑셀 파일로 저장하기
 #pandas read excel
+import pandas as pd
+#read_Excel = pd.read_csv(r'C:\Users\Dell\PycharmProjects\pythonProject\sample.csv', encoding='UTF8')
+##디렉토리 앞에 ''r'을 붙여서 unicodedecode 에러 해소
+#frame_Excel = pd.DataFrame(read_Excel)
+#frame_Excel.to_excel("CSVtest.xlsx", encoding='UTF-8', index=False)
+##index=False로 데이터 앞에 숫자를 출력 안함
+##엑셀을 csv로 되돌리기 utf-8 -> utf-8-sig 로 변경
+# read_Csv = pd.read_excel(r'C:\Users\Dell\PycharmProjects\pythonProject\CSVtest.xlsx')
+# frame_csv = pd.DataFrame(read_Csv)
+# frame_csv.to_csv("CSVtest2.csv", encoding='UTF-8-sig')
+
 
 
 
