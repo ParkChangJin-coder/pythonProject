@@ -92,6 +92,8 @@ print("")
 a = [10, 22, 33, 44, 50]
 a[1:-1] = [20, 30, 40]
 print(a)
+del a[2]
+print(a)
 
 b = [21, 9, 12, 17, 9, 3 ,27, 32, 1]
 print(b)
@@ -99,12 +101,10 @@ b[2] = 22
 b[3] = 7
 b[-2] = 19
 print(b)
-print(b[::2])
-print(b[1::2])
 
-Sum1 = sum(b[::2])
-Sum2 = sum(b[1::2])
-print(Sum1, Sum2)
+Sum1 = sum(b[::2]) #홀수
+Sum2 = sum(b[1::2]) #짝수
+print(Sum1, Sum2) #각각의 합계
 
 c = [5, 9, 1, 2, 10, 15]
 print(max(c), min(c))
