@@ -39,21 +39,25 @@ class ListBoxWidget(QListWidget):
                     links.append(str(url.toString()))
             self.addItems(links)
             print(links)
+            #과제 : 변환 if문을 class 문으로 깔끔하게 호출할 수는 없을까?
 
             for i in range(len(links)): #링크 안의 숫자만큼 for를 돌린다
                type = links[i].split('.') #링크 안에 "."으로 나누어 csv 문자를 분리한다
                type.reverse() # 링크 리스트를 역정렬한다
-               print("type : ", type)
                if type[0] == 'csv': #csv 인지 판별하는 if
                  read_Excel = pd.read_csv(links[i], encoding='UTF8')  #링크 i 번째 를 UTF8로 인코딩
                  frame_Excel = pd.DataFrame(read_Excel)
-                 name = type[1].split('/') #디렉토리 '/'로 나누고 파일명을 가져온다
-                 name.reverse() #파일명을 가져오기 위해 역정렬
-                 print("name : ", name)
+                 name = type[1].split('/') #디렉토리 '/'로 나눈다
+                 name.reverse() #파일명이 앞으로 오도록 리스트 역정렬
                  frame_Excel.to_excel(name[0] + ".xlsx", encoding='UTF-8', index=False)  # index=False로 데이터 앞에 숫자를 출력 안함
+               elif type[0] == 'xlsx': #엑셀 파일 인지 판별하는 if
+                   read_Csv = pd.read_excel(links[i])
+                   frame_csv = pd.DataFrame(read_Csv)
+                   name = type[1].split('/')  # 디렉토리 '/'로 나눈다
+                   name.reverse()  # 파일명이 앞으로 오도록 리스트 역정렬
+                   frame_csv.to_csv(name[0] + ".csv", encoding='UTF-8-sig', index=False)
                else:
-                 print("csv파일이 아닙니다.")
-                 print("아힝흥행")
+                 print("파일 형식을 확인해 주세요")
 
         else:
             event.ignore()
