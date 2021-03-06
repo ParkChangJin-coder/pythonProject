@@ -27,17 +27,17 @@
 # s1.clear() # 전체 삭제
 # print(s1)
 
-a = set([1,2,3,4,5,6])
-b = set([4,5,6,7,8,9])
-c = set([5,6,7,8,9,10])
+# a = set([1,2,3,4,5,6])
+# b = set([4,5,6,7,8,9])
+# c = set([5,6,7,8,9,10])
 
-print(tuple(a & b & c)) #교집합
-print(tuple(a | b | c)) #합집합
-print(tuple(a - b - c)) #차집합
-
-a = [1,1,5,5,4,3,6,7,2,1,5,5,8,5]
-list_1 = list(set(a))
-print(list_1)
+# print(tuple(a & b & c)) #교집합
+# print(tuple(a | b | c)) #합집합
+# print(tuple(a - b - c)) #차집합
+# print("")
+# a = [1,1,5,5,4,3,6,7,2,1,5,5,8,5]
+# list_1 = list(set(a))
+# print(list_1)
 
 d = set([1,2,3,4,5,6])
 e = set([4,5,6,7,8,9])
@@ -50,3 +50,4 @@ e.remove(5)
 f.remove(5)
 print("")
 print(d - e - f)
+
